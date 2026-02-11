@@ -1,0 +1,9 @@
+# Employee Management System
+
+Spring Boot + React CRUD app.
+
+Run backend:
+mvn spring-boot:run
+
+Run frontend:
+npm start
