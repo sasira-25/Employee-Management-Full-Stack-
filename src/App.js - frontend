@@ -1,0 +1,17 @@
+import {useState,useEffect} from "react";
+
+function App(){
+
+const [emps,setEmps]=useState([]);
+
+useEffect(()=>{
+fetch("http://localhost:8080/employees")
+.then(r=>r.json())
+.then(d=>setEmps(d));
+},[]);
+
+return(
+<div>
+<h2>Employees</h2>
+<ul>
+{emps.map(e=><li key={e.id}>{e.name}</li>)
